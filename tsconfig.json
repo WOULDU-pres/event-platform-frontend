@@ -17,5 +17,5 @@
     "rootDir": "./src",
     "composite": true 
   },  
-  "include": ["src/**/*", "src/types/global.d.ts"]
+  "include": ["src/**/*", "src/common/types/global.d.ts"]
 }

@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom'
-import PageTemplate from './components/templates/PageTemplate'
+import styles from './App.module.css'
 
 const App = () => {
   return (
-    <PageTemplate>
+    <main className={styles.main}>
       <Outlet />
-    </PageTemplate>
+    </main>
   )
 }
 
