@@ -1,5 +1,5 @@
 .container {
-  padding: 24px;
+  width: 100%;
 }
 
 .header {
@@ -26,11 +26,33 @@
   gap: 24px;
 }
 
+.list {
+  margin: 0 -8px;
+}
+
+.item {
+  display: flex;
+}
+
+/* Empty 상태일 때 스타일 */
 .empty {
-  text-align: center;
-  padding: 48px;
-  background: #f9fafb;
-  border-radius: 8px;
+  padding: 48px 0;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header :global(.ant-select) {
+    width: 100%;
+  }
+
+  .header :global(.ant-btn) {
+    width: 100%;
+  }
 }
 
 .empty p {

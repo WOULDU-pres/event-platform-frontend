@@ -1,66 +1,77 @@
-import { useState } from 'react'
+import { Select, Button, Empty, Row, Col } from 'antd'
+import { PlusOutlined } from '@ant-design/icons'
 import { RaffleCard } from '../RaffleCard/RaffleCard'
-import { Button } from '../../../../common/components/inputs/Button/Button'
-import { Select } from '../../../../common/components/inputs/Select/Select'
 import styles from './RaffleList.module.css'
-import { RaffleEvent, RaffleStatus } from '../../types/raffle'
+import type { RaffleEvent, RaffleStatus } from '../../types/raffle'
 
 interface RaffleListProps {
   raffles: RaffleEvent[]
-  onRaffleClick: (raffleId: string) => void
+  onRaffleClick: (id: string) => void
   onCreateClick: () => void
+  onStatusChange?: (status: RaffleStatus | 'all') => void
 }
 
+const { Option } = Select
+
 export function RaffleList({ 
-  raffles = [],
+  raffles, 
   onRaffleClick, 
-  onCreateClick 
+  onCreateClick,
+  onStatusChange 
 }: RaffleListProps) {
-  const [status, setStatus] = useState<RaffleStatus | 'all'>('all')
-  
-  const filteredRaffles = status === 'all' 
-    ? raffles 
-    : raffles.filter(raffle => raffle.status === status)
-
-  // Debugging logs
-  console.log('raffles:', raffles)
-  console.log('filteredRaffles:', filteredRaffles)
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h2 className={styles.title}>래플 이벤트 목록</h2>
-        <div className={styles.actions}>
-          <Select 
-            value={status}
-            onChange={(e) => setStatus(e.target.value as RaffleStatus | 'all')}
-          >
-            <option value="all">전체</option>
-            <option value="draft">임시저장</option>
-            <option value="upcoming">진행 예정</option>
-            <option value="in_progress">진행 중</option>
-            <option value="completed">종료됨</option>
-            <option value="cancelled">취소됨</option>
-          </Select>
-          <Button onClick={onCreateClick}>새 래플 만들기</Button>
-        </div>
-      </div>
-      
-      {Array.isArray(filteredRaffles) && filteredRaffles.length === 0 ? (
-        <div className={styles.empty}>
-          <p>등록된 래플 이벤트가 없습니다.</p>
-          <Button onClick={onCreateClick}>첫 래플 만들기</Button>
-        </div>
-      ) : (
-        <div className={styles.grid}>
-          {Array.isArray(filteredRaffles) && filteredRaffles.map(raffle => (
-            <RaffleCard
-              key={raffle.id}
-              raffle={raffle}
-              onClick={() => onRaffleClick(raffle.id)}
-            />
+        <Select
+          defaultValue="all"
+          style={{ width: 200 }}
+          onChange={onStatusChange}
+        >
+          <Option value="all">전체</Option>
+          <Option value="draft">임시저장</Option>
+          <Option value="upcoming">진행 예정</Option>
+          <Option value="in_progress">진행 중</Option>
+          <Option value="completed">종료됨</Option>
+          <Option value="cancelled">취소됨</Option>
+        </Select>
+        
+        <Button 
+          type="primary" 
+          icon={<PlusOutlined />}
+          onClick={onCreateClick}
+        >
+          새 래플 만들기
+        </Button>
+      </div>      
+
+      {Array.isArray(raffles) && raffles.length > 0 ? (
+        <Row gutter={[16, 16]} className={styles.list}>
+          {raffles.map(raffle => (
+            <Col 
+              key={raffle.id} 
+              xs={24} 
+              sm={12} 
+              md={8} 
+              lg={6}
+              className={styles.item}
+            >
+              <RaffleCard
+                raffle={raffle}
+                onClick={() => onRaffleClick(raffle.id)}
+              />
+            </Col>
           ))}
-        </div>
+        </Row>
+      ) : (
+        <Empty
+          image={Empty.PRESENTED_IMAGE_SIMPLE}
+          description="등록된 래플이 없습니다."
+          className={styles.empty}
+        >
+          <Button type="primary" onClick={onCreateClick}>
+            새 래플 만들기
+          </Button>
+        </Empty>
       )}
     </div>
   )

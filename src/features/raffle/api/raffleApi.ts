@@ -86,3 +86,27 @@ export const useUpdateRaffle = () => {
     },
   })
 }
+
+// Fetch participants for a specific raffle
+export const useRaffleParticipants = (raffleId: string) => {
+  return useQuery<RaffleParticipant[]>({
+    queryKey: ['raffleParticipants', raffleId],
+    queryFn: async () => {
+      const { data } = await axios.get(`/api/raffles/${raffleId}/participants`)
+      return data
+    }
+  })
+}
+
+export function useDeleteRaffle() {
+  const queryClient = useQueryClient()
+
+  return useMutation({
+    mutationFn: async (raffleId: string) => {
+      await axios.delete(`/api/raffles/${raffleId}`)
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['raffles'] })
+    }
+  })
+}

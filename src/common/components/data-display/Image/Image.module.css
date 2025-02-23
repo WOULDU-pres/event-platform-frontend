@@ -1,0 +1,14 @@
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image[width] {
+  width: var(--width);
+}
+
+.image[height] {
+  height: var(--height);
+} 

@@ -1,5 +1,5 @@
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
 }
@@ -28,7 +28,7 @@
 .cancelled { background-color: #dc2626; }
 
 .title {
-  margin: 0 0 12px;
+  margin: 16px 0 8px !important;
   font-size: 28px;
   font-weight: 600;
 }
@@ -45,11 +45,8 @@
 }
 
 .imageWrapper {
-  position: relative;
-  padding-top: 56.25%;
-  border-radius: 8px;
-  overflow: hidden;
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .image {
@@ -89,50 +86,38 @@
   font-size: 14px;
 }
 
-.prizes h2 {
-  margin: 0 0 16px;
-  font-size: 20px;
-  font-weight: 600;
+.descriptions {
+  margin-bottom: 32px;
 }
 
-.prizeList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
+.prizes {
+  margin-top: 32px;
 }
 
-.prizeItem {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  overflow: hidden;
+.prizeCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .prizeImage {
   width: 100%;
-  height: 160px;
+  height: 200px;
   object-fit: cover;
+  margin-bottom: 16px;
 }
 
 .prizeInfo {
+  flex: 1;
   padding: 16px;
 }
 
 .prizeRank {
-  display: inline-block;
-  padding: 2px 6px;
-  background: #e0f2fe;
-  color: #0369a1;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
   margin-bottom: 8px;
 }
 
 .prizeName {
-  margin: 0 0 8px;
-  font-size: 16px;
-  font-weight: 600;
+  margin: 8px 0 !important;
 }
 
 .prizeDescription {
@@ -145,4 +130,20 @@
   display: block;
   font-size: 14px;
   color: #6b7280;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
 } 

@@ -1,0 +1,87 @@
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.table th {
+  background-color: #f9fafb;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  cursor: pointer;
+  user-select: none;
+}
+
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1f2937;
+}
+
+.sorting {
+  background-color: #f3f4f6;
+}
+
+.sortIcon {
+  margin-left: 4px;
+  color: #6b7280;
+}
+
+.table tr:hover {
+  background-color: #f9fafb;
+}
+
+.checkboxCell {
+  width: 40px;
+  text-align: center !important;
+  padding: 12px 8px !important;
+}
+
+.selected {
+  background-color: #f3f4f6;
+}
+
+.selected:hover {
+  background-color: #e5e7eb;
+}
+
+.actionsCell {
+  width: 200px;
+  text-align: right !important;
+  padding: 8px 16px !important;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  border-radius: 4px;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 0.2s;
+}
+
+.actionButton:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.actionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
