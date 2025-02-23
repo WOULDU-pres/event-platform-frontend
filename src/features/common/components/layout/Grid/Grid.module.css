@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns, 12), 1fr);
+  gap: var(--grid-gap);
+  row-gap: var(--grid-row-gap);
+  column-gap: var(--grid-column-gap);
+}
+
+.gridItem {
+  grid-column: span var(--grid-column-span, 1);
+  grid-column-start: var(--grid-column-offset);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .gridItem {
+    grid-column: span 4;
+    grid-column-start: auto;
+  }
+} 

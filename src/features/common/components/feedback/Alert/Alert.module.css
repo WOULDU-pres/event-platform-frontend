@@ -1,0 +1,52 @@
+.alert {
+  position: relative;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.message {
+  font-size: 14px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+.info {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.success {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.warning {
+  background-color: #fef3c7;
+  color: #9a3412;
+}
+
+.error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+} 
