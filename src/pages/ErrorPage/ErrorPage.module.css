@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 32rem;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.icon {
+  font-size: 4rem;
+  color: #ef4444;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.message {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.retryButton, .homeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.retryButton {
+  background-color: #2563eb;
+  color: white;
+}
+
+.retryButton:hover {
+  background-color: #1d4ed8;
+}
+
+.homeButton {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.homeButton:hover {
+  background-color: #e5e7eb;
+}
+
+.errorDetails {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.errorDetails p {
+  margin: 0.25rem 0;
+} 
