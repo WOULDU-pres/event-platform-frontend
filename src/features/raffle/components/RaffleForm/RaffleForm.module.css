@@ -1,0 +1,58 @@
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.dateGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.numberGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.prizes {
+  margin-top: 32px;
+}
+
+.prizesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.prizesHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.prizeItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.removeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+} 

@@ -1,0 +1,13 @@
+.container {
+  padding: 16px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+} 
