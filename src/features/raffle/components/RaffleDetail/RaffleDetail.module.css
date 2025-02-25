@@ -21,11 +21,11 @@
   margin-bottom: 12px;
 }
 
-.draft { background-color: #6b7280; }
-.upcoming { background-color: #2563eb; }
-.in_progress { background-color: #16a34a; }
-.completed { background-color: #4b5563; }
-.cancelled { background-color: #dc2626; }
+.DRAFT { background-color: #6b7280; }
+.UPCOMING { background-color: #2563eb; }
+.ACTIVE { background-color: #16a34a; }
+.COMPLETED { background-color: #4b5563; }
+.CANCELLED { background-color: #dc2626; }
 
 .title {
   margin: 16px 0 8px !important;

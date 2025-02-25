@@ -1,9 +1,8 @@
-import { format } from 'date-fns'
-import { ko } from 'date-fns/locale'
 import { Card, Typography, Tag, Button, Descriptions, Row, Col, Image } from 'antd'
 import styles from './RaffleDetail.module.css'
 import type { RaffleEvent, RafflePrize } from '../../types/raffle'
 import type { RaffleStatus } from '../../types/raffle'
+import { safeFormatDate } from '../../../../common/utils/dateUtils'
 
 const { Title, Paragraph } = Typography
 
@@ -15,32 +14,37 @@ interface RaffleDetailProps {
 }
 
 const statusToTagColor: Record<RaffleStatus, string> = {
-  draft: 'default',
-  upcoming: 'blue',
-  in_progress: 'success',
-  completed: 'purple',
-  cancelled: 'error'
+  DRAFT: 'default',
+  UPCOMING: 'blue',
+  ACTIVE: 'success',
+  COMPLETED: 'purple',
+  CANCELLED: 'error'
 }
 
 const statusText = {
-  draft: '임시저장',
-  upcoming: '진행 예정',
-  in_progress: '진행 중',
-  completed: '종료됨',
-  cancelled: '취소됨'
+  DRAFT: '임시저장',
+  UPCOMING: '진행 예정',
+  ACTIVE: '진행 중',
+  COMPLETED: '종료됨',
+  CANCELLED: '취소됨'
 }
 
 export function RaffleDetail({ raffle, prizes, onEdit, onDelete }: RaffleDetailProps) {
+  // 날짜 형식이 올바르지 않은 경우 기본값으로 대체
+  const startDate = safeFormatDate(raffle.startDate);
+  const endDate = safeFormatDate(raffle.endDate);
+  const drawDate = safeFormatDate(raffle.drawDate);
+
   return (
     <div className={styles.container}>
       <Card>
         <div className={styles.header}>
           <div>
-            <Tag color={statusToTagColor[raffle.status]}>
-              {statusText[raffle.status]}
+            <Tag color={statusToTagColor[raffle.status] || 'default'}>
+              {statusText[raffle.status] || '알 수 없음'}
             </Tag>
-            <Title level={2} className={styles.title}>{raffle.title}</Title>
-            <Paragraph type="secondary">{raffle.description}</Paragraph>
+            <Title level={2} className={styles.title}>{raffle.title || '(제목 없음)'}</Title>
+            <Paragraph type="secondary">{raffle.description || '(설명 없음)'}</Paragraph>
           </div>
           {(onEdit || onDelete) && (
             <div className={styles.actions}>
@@ -57,7 +61,7 @@ export function RaffleDetail({ raffle, prizes, onEdit, onDelete }: RaffleDetailP
         <div className={styles.imageWrapper}>
           <Image
             src={raffle.imageUrl || '/placeholder-raffle.png'}
-            alt={raffle.title}
+            alt={raffle.title || '럭키드로우 이미지'}
             fallback="/placeholder-raffle.png"
           />
         </div>
@@ -68,45 +72,52 @@ export function RaffleDetail({ raffle, prizes, onEdit, onDelete }: RaffleDetailP
           className={styles.descriptions}
         >
           <Descriptions.Item label="응모 기간">
-            {format(new Date(raffle.startDate), 'yyyy.MM.dd HH:mm', { locale: ko })} - 
-            {format(new Date(raffle.endDate), 'yyyy.MM.dd HH:mm', { locale: ko })}
+            {startDate} - {endDate}
           </Descriptions.Item>
           <Descriptions.Item label="추첨일">
-            {format(new Date(raffle.drawDate), 'yyyy.MM.dd HH:mm', { locale: ko })}
+            {drawDate}
           </Descriptions.Item>
           <Descriptions.Item label="참여 현황">
-            {raffle.currentParticipants}/{raffle.maxParticipants}명
+            {raffle.currentParticipants || 0}/{raffle.maxParticipants || '-'}명
           </Descriptions.Item>
           <Descriptions.Item label="당첨자 수">
-            {raffle.numberOfWinners}명
+            {raffle.numberOfWinners || '-'}명
           </Descriptions.Item>
         </Descriptions>
 
         <div className={styles.prizes}>
           <Title level={3}>경품 정보</Title>
           <Row gutter={[16, 16]}>
-            {prizes.map(prize => (
-              <Col key={prize.id} xs={24} sm={12}>
-                <Card className={styles.prizeCard}>
-                  {prize.imageUrl && (
-                    <Image
-                      src={prize.imageUrl}
-                      alt={prize.name}
-                      className={styles.prizeImage}
-                      fallback="/placeholder-prize.png"
-                    />
-                  )}
-                  <div className={styles.prizeInfo}>
-                    <Tag color="blue" className={styles.prizeRank}>
-                      {prize.rank}등
-                    </Tag>
-                    <Title level={4} className={styles.prizeName}>{prize.name}</Title>
-                    <Paragraph type="secondary">{prize.description}</Paragraph>
-                    <Paragraph>수량: {prize.quantity}개</Paragraph>
-                  </div>
-                </Card>
+            {prizes && prizes.length > 0 ? (
+              prizes.map(prize => (
+                <Col key={prize.id} xs={24} sm={12}>
+                  <Card className={styles.prizeCard}>
+                    {prize.imageUrl && (
+                      <Image
+                        src={prize.imageUrl}
+                        alt={prize.name || '경품 이미지'}
+                        className={styles.prizeImage}
+                        fallback="/placeholder-prize.png"
+                      />
+                    )}
+                    <div className={styles.prizeInfo}>
+                      <Tag color="blue" className={styles.prizeRank}>
+                        {prize.rank || 1}등
+                      </Tag>
+                      <Title level={4} className={styles.prizeName}>{prize.name || '(경품명 없음)'}</Title>
+                      <Paragraph type="secondary">{prize.description || '(설명 없음)'}</Paragraph>
+                      <Paragraph>수량: {prize.quantity || 0}개</Paragraph>
+                    </div>
+                  </Card>
+                </Col>
+              ))
+            ) : (
+              <Col span={24}>
+                <Paragraph type="secondary" className={styles.emptyPrizes}>
+                  등록된 경품이 없습니다.
+                </Paragraph>
               </Col>
-            ))}
+            )}
           </Row>
         </div>
       </Card>

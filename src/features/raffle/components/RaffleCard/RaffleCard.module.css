@@ -54,8 +54,8 @@
 }
 
 /* Status-specific styles for Badge component */
-.draft { --badge-color: #6b7280; }
-.upcoming { --badge-color: #3b82f6; }
-.in_progress { --badge-color: #10b981; }
-.completed { --badge-color: #6366f1; }
-.cancelled { --badge-color: #ef4444; } 
+.DRAFT { --badge-color: #6b7280; }
+.UPCOMING { --badge-color: #3b82f6; }
+.ACTIVE { --badge-color: #10b981; }
+.COMPLETED { --badge-color: #6366f1; }
+.CANCELLED { --badge-color: #ef4444; } 

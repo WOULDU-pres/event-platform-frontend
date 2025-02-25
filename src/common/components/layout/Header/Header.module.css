@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 0 24px;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: #1890ff;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: #40a9ff;
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 0 16px;
+  }
+} 

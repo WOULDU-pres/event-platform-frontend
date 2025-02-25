@@ -1,7 +1,5 @@
 .form {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 24px;
+  width: 100%;
 }
 
 .dateGroup {
@@ -12,12 +10,13 @@
 
 .numberGroup {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
 .prizes {
-  margin-top: 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .prizesHeader {
@@ -29,30 +28,36 @@
 
 .prizesHeader h3 {
   margin: 0;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.prizeItem {
-  position: relative;
-  display: grid;
-  grid-template-columns: 2fr 3fr 1fr;
-  gap: 16px;
-  padding: 16px;
-  background: #f9fafb;
-  border-radius: 8px;
+.prizeCard {
   margin-bottom: 16px;
 }
 
-.removeButton {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+.prizeCard :global(.ant-card-head) {
+  padding: 0 16px;
+}
+
+.prizeCard :global(.ant-card-body) {
+  padding: 16px;
+}
+
+.addPrizeButton {
+  margin-top: 8px;
 }
 
 .actions {
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
-  margin-top: 32px;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 576px) {
+  .numberGroup {
+    grid-template-columns: 1fr;
+  }
 } 

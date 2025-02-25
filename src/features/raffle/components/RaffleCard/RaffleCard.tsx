@@ -13,19 +13,19 @@ interface RaffleCardProps {
 }
 
 const statusToTagColor: Record<RaffleStatus, string> = {
-  draft: 'default',
-  upcoming: 'blue',
-  in_progress: 'success',
-  completed: 'purple',
-  cancelled: 'error'
+  DRAFT: 'default',
+  UPCOMING: 'blue',
+  ACTIVE: 'success',
+  COMPLETED: 'purple',
+  CANCELLED: 'error'
 }
 
 const statusText = {
-  draft: '임시저장',
-  upcoming: '진행 예정',
-  in_progress: '진행 중',
-  completed: '종료됨',
-  cancelled: '취소됨'
+  DRAFT: '임시저장',
+  UPCOMING: '진행 예정',
+  ACTIVE: '진행 중',
+  COMPLETED: '종료됨',
+  CANCELLED: '취소됨'
 }
 
 export function RaffleCard({ raffle, onClick }: RaffleCardProps) {

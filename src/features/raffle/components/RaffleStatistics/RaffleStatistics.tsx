@@ -8,7 +8,7 @@ interface RaffleStatisticsProps {
 export function RaffleStatistics({ statistics }: RaffleStatisticsProps) {
   return (
     <div className={styles.container}>
-      <h2>래플 통계</h2>
+      <h2>럭키드로우 통계</h2>
       <div className={styles.statItem}>
         <span>총 참여자 수:</span>
         <span>{statistics.totalParticipants}</span>

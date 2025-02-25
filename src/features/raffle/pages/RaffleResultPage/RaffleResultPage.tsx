@@ -12,7 +12,7 @@ export function RaffleResultPage() {
 
   return (
     <div className={styles.container}>
-      <h2>래플 결과</h2>
+      <h2>럭키드로우 결과</h2>
       <WinnerList winners={winners} />
     </div>
   )

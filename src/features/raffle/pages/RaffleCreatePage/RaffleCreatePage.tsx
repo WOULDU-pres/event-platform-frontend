@@ -15,12 +15,12 @@ export function RaffleCreatePage() {
   const handleSubmit = (data: RaffleEventFormData) => {
     createRaffle(data, {
       onSuccess: () => {
-        messageApi.success('래플이 성공적으로 생성되었습니다.')
+        messageApi.success('럭키드로우이 성공적으로 생성되었습니다.')
         navigate('/raffles')
       },
       onError: (error) => {
         console.error('Error creating raffle:', error)
-        messageApi.error('래플 생성 중 오류가 발생했습니다.')
+        messageApi.error('럭키드로우 생성 중 오류가 발생했습니다.')
       }
     })
   }
@@ -34,7 +34,7 @@ export function RaffleCreatePage() {
       {contextHolder}
       <div className={styles.container}>
         <Card className={styles.card}>
-          <Title level={2}>새 래플 만들기</Title>
+          <Title level={2}>새 럭키드로우 만들기</Title>
           <RaffleForm onSubmit={handleSubmit} onCancel={handleCancel} />
         </Card>
       </div>

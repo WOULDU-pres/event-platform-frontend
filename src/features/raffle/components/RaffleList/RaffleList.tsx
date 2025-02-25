@@ -28,11 +28,11 @@ export function RaffleList({
           onChange={onStatusChange}
         >
           <Option value="all">전체</Option>
-          <Option value="draft">임시저장</Option>
-          <Option value="upcoming">진행 예정</Option>
-          <Option value="in_progress">진행 중</Option>
-          <Option value="completed">종료됨</Option>
-          <Option value="cancelled">취소됨</Option>
+          <Option value="DRAFT">임시저장</Option>
+          <Option value="UPCOMING">진행 예정</Option>
+          <Option value="ACTIVE">진행 중</Option>
+          <Option value="COMPLETED">종료됨</Option>
+          <Option value="CANCELLED">취소됨</Option>
         </Select>
         
         <Button 
@@ -40,7 +40,7 @@ export function RaffleList({
           icon={<PlusOutlined />}
           onClick={onCreateClick}
         >
-          새 래플 만들기
+          새 럭키드로우 만들기
         </Button>
       </div>      
 
@@ -65,11 +65,11 @@ export function RaffleList({
       ) : (
         <Empty
           image={Empty.PRESENTED_IMAGE_SIMPLE}
-          description="등록된 래플이 없습니다."
+          description="등록된 럭키드로우이 없습니다."
           className={styles.empty}
         >
           <Button type="primary" onClick={onCreateClick}>
-            새 래플 만들기
+            새 럭키드로우 만들기
           </Button>
         </Empty>
       )}

@@ -16,7 +16,7 @@ const FEATURE_CARDS: FeatureCard[] = [
   },
   {
     id: 'raffles',
-    title: '래플 이벤트',
+    title: '럭키드로우 이벤트',
     description: '추첨을 통한 상품 증정 이벤트를 관리합니다.',
     path: '/raffles',
     icon: 'card_giftcard',

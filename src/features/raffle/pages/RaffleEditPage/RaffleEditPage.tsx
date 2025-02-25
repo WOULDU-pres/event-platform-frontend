@@ -18,12 +18,12 @@ export function RaffleEditPage() {
     if (raffleId) {
       updateRaffle({ id: raffleId, ...data }, {
         onSuccess: () => {
-          messageApi.success('래플이 성공적으로 수정되었습니다.')
+          messageApi.success('럭키드로우이 성공적으로 수정되었습니다.')
           navigate(`/raffles/${raffleId}`)
         },
         onError: (error) => {
           console.error('Error updating raffle:', error)
-          messageApi.error('래플 수정 중 오류가 발생했습니다.')
+          messageApi.error('럭키드로우 수정 중 오류가 발생했습니다.')
         }
       })
     }
@@ -44,7 +44,7 @@ export function RaffleEditPage() {
   if (error || !raffle) {
     return (
       <div className={styles.errorContainer}>
-        <p>래플 정보를 불러오는 중 오류가 발생했습니다.</p>
+        <p>럭키드로우 정보를 불러오는 중 오류가 발생했습니다.</p>
       </div>
     )
   }
@@ -54,7 +54,7 @@ export function RaffleEditPage() {
       {contextHolder}
       <div className={styles.container}>
         <Card className={styles.card}>
-          <Title level={2}>래플 수정</Title>
+          <Title level={2}>럭키드로우 수정</Title>
           <RaffleForm 
             initialData={raffle} 
             onSubmit={handleSubmit} 
