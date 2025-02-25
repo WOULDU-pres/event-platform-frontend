@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './HomePage.module.css'
+import { Button, message } from 'antd'
 import type { FeatureCard } from '../../types/navigation'
 import { useState } from 'react'
 import axios from 'axios'
@@ -57,6 +58,7 @@ const FEATURE_CARDS: FeatureCard[] = [
 
 const TestErrorButton = () => {
   const [loading, setLoading] = useState(false)
+  const [messageApi, contextHolder] = message.useMessage()
 
   const testNetworkError = async () => {
     setLoading(true)
@@ -65,19 +67,23 @@ const TestErrorButton = () => {
       await axios.get('http://localhost:3000/non-existent')
     } catch (error) {
       console.log('Error caught:', error)
+      messageApi.error('네트워크 에러가 발생했습니다.')
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <button 
-      onClick={testNetworkError}
-      disabled={loading}
-      className="error-test-button"
-    >
-      네트워크 에러 테스트
-    </button>
+    <>
+      {contextHolder}
+      <Button 
+        onClick={testNetworkError}
+        loading={loading}
+        danger
+      >
+        네트워크 에러 테스트
+      </Button>
+    </>
   )
 }
 
@@ -112,7 +118,9 @@ const HomePage = () => {
         ))}
       </div>
 
-      <TestErrorButton />
+      <div className={styles.testButton}>
+        <TestErrorButton />
+      </div>
     </div>
   )
 }

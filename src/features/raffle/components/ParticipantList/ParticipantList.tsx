@@ -20,7 +20,8 @@ const mockParticipants: RaffleParticipant[] = [
 
 export function ParticipantList({ raffleId }: { raffleId: string }) {
   const [selectedRows, setSelectedRows] = useState<RaffleParticipant[]>([])
-  const { data: participants = [], isLoading, error } = useRaffleParticipants(raffleId)
+  // const { data: participants = [], isLoading, error } = useRaffleParticipants(raffleId)
+  const { isLoading, error } = useRaffleParticipants(raffleId)
 
   const columns = [
     { key: 'userName' as keyof RaffleParticipant, header: '이름' },
