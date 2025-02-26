@@ -1,0 +1,45 @@
+.card {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.historyItem {
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.historyItem:hover {
+  background-color: #f9fafb;
+}
+
+.historyContent {
+  width: 100%;
+}
+
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.historyDate {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.historyResults {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.historyResultTag {
+  margin-right: 0;
+} 

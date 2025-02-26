@@ -1,0 +1,27 @@
+.form {
+  width: 100%;
+}
+
+.itemsTextarea {
+  font-family: monospace;
+}
+
+.settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 576px) {
+  .settings {
+    grid-template-columns: 1fr;
+  }
+} 
