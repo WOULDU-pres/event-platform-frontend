@@ -23,18 +23,26 @@ const FEATURE_CARDS: FeatureCard[] = [
     backgroundColor: '#E3F2FD'
   },
   {
-    id: 'analytics',
-    title: '이벤트 분석',
-    description: '진행된 이벤트의 성과를 분석하고 인사이트를 도출합니다.',
-    path: '/analytics',
+    id: 'random-picker',
+    title: '랜덤 뽑기 이벤트',
+    description: '랜덤 뽑기 이벤트를 관리합니다.',
+    path: '/random-picker',
     icon: 'analytics',
-    backgroundColor: '#F3E5F5'
+    backgroundColor: '#F2F6D0'
   },
   {
-    id: 'time-deals',
-    title: '타임딜 관리',
+    id: 'attendance-check',
+    title: '출석체크 관리',
+    description: '출석체크 이벤트를 관리합니다.',
+    path: '/attendance',
+    icon: 'schedule',
+    backgroundColor: '#FCEEE3'
+  },
+  {
+    id: 'time-attack',
+    title: '타임어택 관리',
     description: '지정된 시간대별로 다양한 할인 상품을 관리합니다.',
-    path: '/time-deals',
+    path: '/time-attack',
     icon: 'schedule',
     backgroundColor: '#FFF3E0'
   },
@@ -52,7 +60,15 @@ const FEATURE_CARDS: FeatureCard[] = [
     description: '수량이 제한된 특별 상품의 판매 이벤트를 관리합니다.',
     path: '/limited-deals',
     icon: 'inventory',
-    backgroundColor: '#FCEEE3'
+    backgroundColor: '#F8F3D9'
+  },
+  {
+    id: 'analytics',
+    title: '이벤트 분석',
+    description: '진행된 이벤트의 성과를 분석하고 인사이트를 도출합니다.',
+    path: '/analytics',
+    icon: 'analytics',
+    backgroundColor: '#F3E5F5'
   }
 ]
 

@@ -1,0 +1,65 @@
+.container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.filters {
+  margin-bottom: 24px;
+}
+
+.statusFilter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  width: 100%;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.eventList {
+  margin-top: 24px;
+}
+
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  margin-top: 24px;
+}
+
+.emptyButton {
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header button {
+    margin-top: 16px;
+    align-self: flex-start;
+  }
+  
+  .statusFilter {
+    margin-bottom: 16px;
+  }
+} 

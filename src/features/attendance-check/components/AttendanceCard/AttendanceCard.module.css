@@ -1,0 +1,50 @@
+.card {
+  width: 100%;
+  margin-bottom: 16px;
+  transition: all 0.3s;
+}
+
+.cardCover {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.statusTag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.title {
+  margin-bottom: 12px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.infoItem {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+} 
