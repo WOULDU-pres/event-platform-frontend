@@ -1,0 +1,81 @@
+.eventInfoCard {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  margin-bottom: 0 !important;
+}
+
+.statusTag {
+  font-size: 14px;
+  padding: 2px 12px;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.65);
+  white-space: pre-line;
+}
+
+.divider {
+  margin: 24px 0;
+}
+
+.details {
+  margin-bottom: 16px;
+}
+
+.detailItem {
+  padding: 8px 0;
+}
+
+.passingScore {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #f6ffed;
+  border-radius: 4px;
+  border: 1px solid #b7eb8f;
+  margin-top: 16px;
+}
+
+.passingIcon {
+  color: #52c41a;
+  font-size: 16px;
+}
+
+.actionSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.actionButton {
+  min-width: 150px;
+}
+
+@media (max-width: 576px) {
+  .headerSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .title {
+    margin-bottom: 8px !important;
+  }
+} 

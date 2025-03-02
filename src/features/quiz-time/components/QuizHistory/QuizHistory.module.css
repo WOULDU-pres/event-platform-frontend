@@ -1,0 +1,96 @@
+.quizHistory {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.searchInput {
+  width: 300px;
+}
+
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .searchInput {
+    width: 100%;
+  }
+}
+
+.resultsList {
+  margin-top: 16px;
+}
+
+.resultCard {
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.resultCard:hover {
+  transform: translateY(-3px);
+}
+
+.resultHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.quizTitle {
+  margin-bottom: 4px !important;
+}
+
+.completedDate {
+  font-size: 12px;
+}
+
+.scoreTag {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px 12px;
+}
+
+.resultStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statIcon {
+  color: #1890ff;
+}
+
+.viewDetails {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.viewButton {
+  padding: 0;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+  gap: 16px;
+} 

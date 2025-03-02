@@ -1,0 +1,157 @@
+.quizTimePage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  min-width: 150px;
+  text-align: center;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statisticTitle {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.statisticValue {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.statisticSuffix {
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.filterSelect {
+  min-width: 150px;
+}
+
+.tabs {
+  margin-bottom: 24px;
+}
+
+.quizGrid {
+  margin-top: 16px;
+}
+
+.quizCard {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.quizCard:hover {
+  transform: translateY(-5px);
+}
+
+.quizCardCover {
+  height: 120px;
+  background: linear-gradient(135deg, #1890ff 0%, #722ed1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.quizCategory {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.completedBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(82, 196, 26, 0.8);
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quizMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.rewardsPreview {
+  background-color: #fffbe6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #faad14;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+  gap: 16px;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+  gap: 16px;
+} 

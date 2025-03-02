@@ -1,0 +1,95 @@
+.questionCard {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.questionInfo {
+  flex: 1;
+}
+
+.questionNumber {
+  display: block;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 8px;
+}
+
+.progressIndicator {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #1890ff;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.timerContainer {
+  min-width: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.questionContent {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.questionText {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.divider {
+  margin: 24px 0;
+}
+
+.optionsContainer {
+  margin-bottom: 32px;
+}
+
+.actionArea {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.submitButton {
+  min-width: 150px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .timerContainer {
+    align-self: flex-end;
+    margin-top: -32px;
+  }
+} 

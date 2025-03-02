@@ -1,0 +1,70 @@
+.answerOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.answerOption:hover {
+  background-color: #f5f5f5;
+  border-color: #d9d9d9;
+}
+
+.answerOption.selected {
+  background-color: #e6f7ff;
+  border-color: #1890ff;
+}
+
+.answerOption.correct {
+  background-color: #f6ffed;
+  border-color: #52c41a;
+}
+
+.answerOption.incorrect {
+  background-color: #fff1f0;
+  border-color: #ff4d4f;
+}
+
+.radio {
+  font-size: 16px;
+}
+
+.optionText {
+  margin-left: 8px;
+}
+
+.resultIcon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.correctIcon {
+  color: #52c41a;
+}
+
+.incorrectIcon {
+  color: #ff4d4f;
+}
+
+/* Animation for revealing correct/incorrect answers */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.resultIcon {
+  animation: fadeIn 0.5s ease-in-out;
+} 

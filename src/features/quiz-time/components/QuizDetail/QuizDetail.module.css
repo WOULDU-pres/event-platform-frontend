@@ -1,0 +1,127 @@
+.quizDetail {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detailCard {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title {
+  margin-bottom: 0 !important;
+  flex: 1;
+}
+
+.difficultyTag {
+  font-size: 14px;
+  padding: 2px 12px;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.description {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.65);
+  white-space: pre-line;
+}
+
+.divider {
+  margin: 24px 0;
+}
+
+.statsRow {
+  padding: 16px 0;
+}
+
+.statistic {
+  text-align: center;
+}
+
+.rewardsSection {
+  margin-top: 32px;
+}
+
+.rewardsList {
+  margin-top: 16px;
+}
+
+.rewardCard {
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.rewardCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rewardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rewardValue {
+  font-size: 18px;
+  color: #1890ff;
+}
+
+.rewardName {
+  font-size: 14px;
+  display: block;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.actionSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f0;
+  gap: 16px;
+}
+
+.completedTag {
+  padding: 4px 12px;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.startButton {
+  min-width: 120px;
+}
+
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .buttons button {
+    width: 100%;
+    margin-top: 8px;
+  }
+} 

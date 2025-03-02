@@ -1,0 +1,133 @@
+.rewardsList {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rewardsCount {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.tabs {
+  margin-bottom: 24px;
+}
+
+.tabs :global(.ant-tabs-nav) {
+  margin-bottom: 24px;
+}
+
+.rewardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.rewardItem {
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.rewardItem:hover {
+  transform: translateY(-3px);
+}
+
+.rewardCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rewardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.rewardValue {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff;
+}
+
+.rewardName {
+  margin-bottom: 8px !important;
+}
+
+.rewardDescription {
+  flex-grow: 1;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.rewardMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.expiryDate {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+}
+
+.rewardActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px dashed #f0f0f0;
+}
+
+.redemptionCode {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.codeText {
+  margin-right: 8px;
+}
+
+.copyButton {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.copyButton:hover {
+  color: #1890ff;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+  gap: 16px;
+}
+
+@media (max-width: 576px) {
+  .rewardsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rewardActions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+} 

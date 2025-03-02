@@ -1,0 +1,165 @@
+.rewardsPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.statsContainer {
+  margin-bottom: 24px;
+}
+
+.valueStat {
+  margin-top: 16px;
+}
+
+.statCard {
+  text-align: center;
+  padding: 16px;
+  height: 100%;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1890ff;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.filtersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.searchInput {
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.rewardTypeFilters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  white-space: nowrap;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tabs {
+  margin-bottom: 24px;
+}
+
+.rewardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.rewardCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rewardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.rewardType {
+  text-transform: capitalize;
+}
+
+.rewardTitle {
+  margin-bottom: 8px;
+}
+
+.rewardDescription {
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+.rewardMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.expiryDate {
+  font-size: 12px;
+}
+
+.rewardValue {
+  font-weight: 500;
+  color: #1890ff;
+}
+
+.rewardActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+  gap: 16px;
+}
+
+@media (max-width: 576px) {
+  .rewardsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rewardActions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .actions button {
+    width: 100%;
+  }
+} 
