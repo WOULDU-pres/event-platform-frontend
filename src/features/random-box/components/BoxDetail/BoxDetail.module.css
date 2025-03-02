@@ -1,0 +1,138 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  border-radius: 8px;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.badgeContainer {
+  margin-right: 12px;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.imagePlaceholder {
+  font-size: 64px;
+  color: #bfbfbf;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.probabilityList {
+  margin-bottom: 24px;
+}
+
+.probabilityItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.probabilityItemName {
+  display: flex;
+  align-items: center;
+}
+
+.probabilityItemCategory {
+  margin-left: 8px;
+}
+
+.probabilityValue {
+  font-weight: bold;
+}
+
+.purchaseInfo {
+  margin-bottom: 24px;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.priceLabel {
+  font-size: 16px;
+  color: #666;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.stockInfo {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.stockProgress {
+  margin-bottom: 16px;
+}
+
+.purchaseButton {
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+} 

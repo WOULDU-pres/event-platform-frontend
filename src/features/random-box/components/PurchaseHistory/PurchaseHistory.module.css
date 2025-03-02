@@ -1,0 +1,177 @@
+.container {
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.subTitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  color: #bfbfbf;
+  margin-bottom: 16px;
+}
+
+.emptyText {
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 24px;
+}
+
+.historyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.historyCard {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  cursor: pointer;
+}
+
+.historyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  height: 160px;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cardImagePlaceholder {
+  font-size: 48px;
+  color: #bfbfbf;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.itemName {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.boxInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.boxName {
+  font-size: 14px;
+  color: #666;
+  margin-left: 4px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dateInfo {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.itemCategory {
+  font-size: 12px;
+}
+
+.loadMoreContainer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.loadMoreButton {
+  min-width: 160px;
+}
+
+.pagination {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.filterContainer {
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.filterLabel {
+  font-size: 14px;
+  color: #666;
+}
+
+.filterSelect {
+  min-width: 160px;
+}
+
+.dateRangePicker {
+  margin-left: auto;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .historyGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  .dateRangePicker {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .filterContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filterSelect, .searchInput {
+    width: 100%;
+    max-width: none;
+  }
+} 

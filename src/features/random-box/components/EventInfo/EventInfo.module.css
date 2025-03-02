@@ -1,0 +1,187 @@
+.container {
+  width: 100%;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bannerDefault {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1890ff 0%, #722ed1 100%);
+  color: white;
+}
+
+.bannerTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.bannerSubtitle {
+  font-size: 14px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.timeInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.timeBlock {
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+}
+
+.timeLabel {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.timeValue {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.countdown {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: bold;
+}
+
+.countdownLabel {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.countdownValue {
+  display: flex;
+  align-items: center;
+}
+
+.countdownDigit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  margin: 0 4px;
+  padding: 0 4px;
+  background-color: #1890ff;
+  color: white;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.countdownSeparator {
+  margin: 0 4px;
+  color: #1890ff;
+  font-weight: bold;
+}
+
+.card {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rulesList {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.ruleItem {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.statusBadge {
+  margin-left: 8px;
+}
+
+.statusActive {
+  background-color: #52c41a;
+}
+
+.statusInactive {
+  background-color: #ff4d4f;
+}
+
+.statusScheduled {
+  background-color: #faad14;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 140px;
+  }
+  
+  .bannerTitle {
+    font-size: 24px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .timeInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .timeBlock {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  
+  .countdown {
+    margin-left: 0;
+    margin-top: 16px;
+    align-items: flex-start;
+  }
+} 

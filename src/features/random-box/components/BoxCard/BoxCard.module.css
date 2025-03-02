@@ -1,0 +1,89 @@
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cardSelected {
+  border: 2px solid #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.cardImage {
+  height: 160px;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImagePlaceholder {
+  font-size: 48px;
+  color: #bfbfbf;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+}
+
+.cardType {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cardPrice {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.cardStock {
+  font-size: 14px;
+  color: #666;
+}
+
+.soldOut {
+  color: #ff4d4f;
+  font-weight: bold;
+}
+
+.almostSoldOut {
+  color: #fa8c16;
+} 
