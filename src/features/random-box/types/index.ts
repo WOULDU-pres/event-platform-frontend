@@ -1,10 +1,10 @@
 export * from './randomBox'
 
 // 랜덤박스 타입 정의
-export type RandomBoxType = 'normal' | 'rare' | 'epic' | 'legendary'
+export type RandomBoxType = 'NORMAL' | 'RARE' | 'EPIC' | 'LEGENDARY'
 
 // 아이템 카테고리 정의
-export type ItemCategory = 'physical' | 'digital' | 'coupon' | 'event'
+export type ItemCategory = 'PHYSICAL' | 'DIGITAL' | 'COUPON' | 'POINT'
 
 // 랜덤박스 아이템 정의
 export interface RandomBoxItem {
@@ -32,6 +32,7 @@ export interface RandomBox {
 
 // 랜덤박스 구매 결과
 export interface RandomBoxPurchaseResult {
+  revealedAt(revealedAt: any): import("react").ReactNode
   id: string
   boxId: string
   boxName: string // 랜덤박스 이름

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Card, Badge } from 'antd'
+import { Badge } from 'antd'
 import { GiftOutlined } from '@ant-design/icons'
-import { RandomBox } from '../../types'
+import { BoxType, RandomBox } from '../../types'
 import { BOX_TYPE_TEXT, BOX_TYPE_COLOR } from '../../constants'
 import styles from './BoxCard.module.css'
 
@@ -46,8 +46,8 @@ const BoxCard: React.FC<BoxCardProps> = ({ box, isSelected = false, onClick }) =
         <div className={styles.cardHeader}>
           <h3 className={styles.cardTitle}>{box.name}</h3>
           <Badge
-            color={BOX_TYPE_COLOR[box.type]}
-            text={BOX_TYPE_TEXT[box.type]}
+            color={BOX_TYPE_COLOR[box.type as BoxType]}
+            text={BOX_TYPE_TEXT[box.type as BoxType]}
             className={styles.cardType}
           />
         </div>

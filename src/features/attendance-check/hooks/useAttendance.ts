@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { 
   useAttendanceEvents, 
   useCreateAttendanceEvent,
-  useGenerateQRCode,
   useCheckInWithQRCode,
   useAttendanceEventDetail,
   useAttendanceParticipants,
@@ -220,7 +219,7 @@ export const useAttendanceForm = (initialData?: AttendanceEvent) => {
 /**
  * QR 코드 스캔 및 관리 훅
  */
-export const useAttendanceQR = (eventId: string, validMinutes: number = 5) => {
+export const useAttendanceQR = (_eventId: string, _validMinutes: number = 5) => {
   const [messageApi, contextHolder] = message.useMessage()
   const { mutateAsync: checkIn, isPending: isCheckingIn } = useCheckInWithQRCode()
   

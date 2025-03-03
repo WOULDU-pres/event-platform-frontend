@@ -1,12 +1,12 @@
 import { Card, Typography, Tag, Tooltip } from 'antd'
 import { LineChartOutlined, ClockCircleOutlined, CheckCircleOutlined } from '@ant-design/icons'
-import { PickerConfig, PickerStatus } from '../../types/picker'
+import { PickerConfig } from '../../types/picker'
 import { getStatusText, getStatusTagColor } from '../../util/pickerUtils'
 import styles from './PickerCard.module.css'
 import { formatDistanceToNow } from 'date-fns'
 import { ko } from 'date-fns/locale'
 
-const { Paragraph, Text } = Typography
+const { Paragraph } = Typography
 
 interface PickerCardProps {
   picker: PickerConfig

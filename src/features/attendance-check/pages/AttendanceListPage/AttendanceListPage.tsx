@@ -3,7 +3,6 @@ import { Spin, message, Typography, Radio, Button, Input, Row, Col, Empty } from
 import { PlusOutlined, SearchOutlined } from '@ant-design/icons'
 import { useAttendanceList } from '../../hooks/useAttendance'
 import { AttendanceCard } from '../../components/AttendanceCard/AttendanceCard'
-import type { AttendanceEventStatus } from '../../types/attendance'
 import { ATTENDANCE_EVENT_STATUS, ATTENDANCE_ERROR_MESSAGES } from '../../constants/attendanceConstants'
 import styles from './AttendanceListPage.module.css'
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { Form, Input, Button, InputNumber, Switch, Space } from 'antd'
 import { PickerFormData, PickerConfig } from '../../types/picker'
 import styles from './PickerForm.module.css'

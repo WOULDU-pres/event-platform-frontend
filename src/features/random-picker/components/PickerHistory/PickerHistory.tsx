@@ -1,4 +1,4 @@
-import { Card, Typography, List, Tag, Divider, Empty } from 'antd'
+import { Card, Typography, List, Tag, Empty } from 'antd'
 import { ClockCircleOutlined } from '@ant-design/icons'
 import { PickerResult } from '../../types/picker'
 import styles from './PickerHistory.module.css'

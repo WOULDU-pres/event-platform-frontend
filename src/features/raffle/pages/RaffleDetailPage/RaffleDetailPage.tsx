@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom'
-import { Spin, message, Modal, Button, Layout } from 'antd'
+import { Spin, message, Modal, Layout } from 'antd'
 import { RaffleDetail } from '../../components/RaffleDetail/RaffleDetail'
 import { useRaffleDetail, useDeleteRaffle } from '../../api/raffleApi'
 import { Header } from '../../../../common/components/layout/Header/Header'

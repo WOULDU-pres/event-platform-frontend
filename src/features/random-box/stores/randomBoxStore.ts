@@ -1,8 +1,5 @@
 import { create } from 'zustand'
 import { 
-  RandomBoxEvent, 
-  RandomBox, 
-  RandomBoxItem, 
   RandomBoxPurchase, 
   RandomBoxPurchaseResult 
 } from '../types'

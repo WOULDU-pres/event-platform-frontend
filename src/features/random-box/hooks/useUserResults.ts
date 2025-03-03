@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRandomBoxPurchaseHistory, useRandomBoxPurchaseResult } from '../api/randomBoxApi'
 import { getUserUuid } from '../utils/uuidGenerator'
-import { RandomBoxPurchase } from '../types'
 
 interface UseUserResultsParams {
   initialPurchaseId?: string

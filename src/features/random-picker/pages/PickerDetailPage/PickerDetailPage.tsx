@@ -16,9 +16,7 @@ import {
 import { 
   EditOutlined, 
   DeleteOutlined, 
-  PlayCircleOutlined,
-  CopyOutlined,
-  SaveOutlined
+  PlayCircleOutlined
 } from '@ant-design/icons'
 import { 
   usePickerDetail, 

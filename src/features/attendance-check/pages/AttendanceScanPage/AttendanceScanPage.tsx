@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Typography, Button, Card, Spin, Result, message } from 'antd'
+import { Typography, Button, Card, Spin, Result } from 'antd'
 import { ArrowLeftOutlined, QrcodeOutlined, ReloadOutlined } from '@ant-design/icons'
 import { Scanner, IDetectedBarcode } from '@yudiel/react-qr-scanner'
 import { useAttendanceQR } from '../../hooks/useAttendance'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Empty, Spin } from 'antd'
+import { Spin } from 'antd'
 import { GiftOutlined } from '@ant-design/icons'
 import { RandomBox } from '../../types'
 import BoxCard from '../BoxCard/BoxCard'

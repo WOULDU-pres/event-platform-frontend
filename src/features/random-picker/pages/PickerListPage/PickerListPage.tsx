@@ -20,7 +20,6 @@ export function PickerListPage() {
     data: pickers,
     isLoading,
     isError,
-    error
   } = usePickers()
   
   // 에러 처리

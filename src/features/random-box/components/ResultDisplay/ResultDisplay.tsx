@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Button, Badge, Typography, Divider, Tag } from 'antd'
+import { Card, Button, Badge, Divider, Tag } from 'antd'
 import { GiftOutlined, ShareAltOutlined, ShoppingCartOutlined, DownloadOutlined } from '@ant-design/icons'
 import { RandomBoxPurchaseResult } from '../../types'
 import { ITEM_CATEGORY_TEXT, ITEM_CATEGORY_COLOR } from '../../constants'
 import styles from './ResultDisplay.module.css'
 
-const { Text } = Typography
 
 interface ResultDisplayProps {
   result: RandomBoxPurchaseResult

@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { AttendanceEventFormData, AttendanceEvent } from '../../types/attendance'
 import styles from './AttendanceForm.module.css'
 import dayjs from 'dayjs'
-import type { RangePickerProps } from 'antd/es/date-picker'
 
 const { TextArea } = Input
 const { RangePicker } = DatePicker

@@ -12,6 +12,32 @@ const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString(undefined, options)
 }
 
+// 안전하게 날짜 포맷팅하는 헬퍼 함수
+const safeFormatDate = (value: any): string => {
+  // 값이 없거나 함수인 경우 기본값 반환
+  if (!value || typeof value === 'function') return '날짜 정보 없음';
+  
+  // 문자열인 경우 그대로 formatDate 호출
+  if (typeof value === 'string') {
+    return formatDate(value);
+  }
+  
+  // 객체인 경우 toString 시도
+  if (typeof value === 'object') {
+    try {
+      if (value instanceof Date) {
+        return formatDate(value.toISOString());
+      }
+      return formatDate(String(value));
+    } catch (e) {
+      return '유효하지 않은 날짜';
+    }
+  }
+  
+  // 그 외 케이스는 문자열로 변환 시도
+  return formatDate(String(value));
+};
+
 /**
  * 랜덤박스 결과 페이지 컴포넌트
  */
@@ -129,7 +155,7 @@ const ResultPage: React.FC = () => {
           />
           
           <div className={styles.itemValue}>
-            가치: {item.value.toLocaleString()}원
+            가치: {item.value?.toLocaleString()}원
           </div>
           
           <div className={styles.categoryBadge}>
@@ -140,8 +166,8 @@ const ResultPage: React.FC = () => {
           </div>
           
           <div className={styles.purchaseInfo}>
-            구매일: {formatDate(selectedPurchase.purchaseDate)}<br />
-            획득일: {formatDate(selectedResult.revealedAt)}
+            구매일: {safeFormatDate(selectedPurchase.purchaseDate)}<br />
+            획득일: {safeFormatDate(selectedResult.revealedAt)}
           </div>
         </Card>
         

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Button, Badge, Progress, Skeleton, Divider } from 'antd'
 import { ShoppingOutlined, GiftOutlined, InfoCircleOutlined } from '@ant-design/icons'
-import { RandomBox } from '../../types'
+import { BoxType, RandomBox } from '../../types'
 import { BOX_TYPE_TEXT, BOX_TYPE_COLOR, ITEM_CATEGORY_TEXT, ITEM_CATEGORY_COLOR } from '../../constants'
 import { formatProbability } from '../../utils/probabilityCalculator'
 import styles from './BoxDetail.module.css'
@@ -54,7 +54,7 @@ const BoxDetail: React.FC<BoxDetailProps> = ({
           <h2 className={styles.title}>{box.name}</h2>
           <div className={styles.subtitle}>
             <div className={styles.badgeContainer}>
-              <Badge color={BOX_TYPE_COLOR[box.type]} text={BOX_TYPE_TEXT[box.type]} />
+              <Badge color={BOX_TYPE_COLOR[box.type as BoxType]} text={BOX_TYPE_TEXT[box.type as BoxType]} />
             </div>
           </div>
         </div>

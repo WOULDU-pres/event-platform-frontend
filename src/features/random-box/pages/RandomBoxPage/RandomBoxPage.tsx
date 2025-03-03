@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button, Spin, Empty, message, Skeleton, Card, Badge, Tabs, Modal } from 'antd'
+import { Button, Spin, Empty, message, Skeleton, Card, Badge } from 'antd'
 import { GiftOutlined, ShoppingOutlined, HistoryOutlined } from '@ant-design/icons'
 import { useRandomBoxes, useBoxPurchase, useUserResults } from '../../hooks'
-import { STATUS_TEXT, STATUS_COLOR, BOX_TYPE_TEXT, BOX_TYPE_COLOR, ITEM_CATEGORY_COLOR, ITEM_CATEGORY_TEXT, ANIMATION_CONFIG } from '../../constants'
+import { STATUS_COLOR, BOX_TYPE_TEXT, BOX_TYPE_COLOR, ITEM_CATEGORY_COLOR, ITEM_CATEGORY_TEXT, ANIMATION_CONFIG } from '../../constants'
 import { formatProbability } from '../../utils/probabilityCalculator'
 import styles from './RandomBoxPage.module.css'
+import { ItemCategory } from '../../types'
 
 // Date formatter helper function (replace with actual import if available)
 const formatDate = (dateString: string) => {
@@ -200,8 +201,8 @@ const RandomBoxPage: React.FC = () => {
                 />
                 <div style={{marginTop: 12}}>
                   <Badge 
-                    color={ITEM_CATEGORY_COLOR[purchase.result.item.category]} 
-                    text={ITEM_CATEGORY_TEXT[purchase.result.item.category]} 
+                    color={ITEM_CATEGORY_COLOR[purchase.result.item.category as ItemCategory]} 
+                    text={ITEM_CATEGORY_TEXT[purchase.result.item.category as ItemCategory]} 
                   />
                 </div>
               </Card>

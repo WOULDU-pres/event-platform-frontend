@@ -4,7 +4,7 @@ import { RedoOutlined, SaveOutlined, CopyOutlined } from '@ant-design/icons'
 import { PickerItem } from '../../types/picker'
 import styles from './PickerResult.module.css'
 
-const { Title, Text, Paragraph } = Typography
+const { Title, Text } = Typography
 
 interface PickerResultProps {
   loading: boolean

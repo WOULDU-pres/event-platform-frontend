@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Modal, Button, Badge } from 'antd'
 import { GiftOutlined, ShoppingOutlined, CheckCircleOutlined, CloseCircleOutlined } from '@ant-design/icons'
-import { RandomBox, RandomBoxPurchaseResult } from '../../types'
-import { BOX_TYPE_TEXT, BOX_TYPE_COLOR, ITEM_CATEGORY_TEXT, ITEM_CATEGORY_COLOR, ANIMATION_CONFIG } from '../../constants'
+import { BoxType, RandomBox, RandomBoxPurchaseResult } from '../../types'
+import { BOX_TYPE_TEXT, BOX_TYPE_COLOR, ITEM_CATEGORY_TEXT, ITEM_CATEGORY_COLOR } from '../../constants'
 import styles from './PurchaseModal.module.css'
 
 // 모달 상태 타입
@@ -114,7 +114,7 @@ const PurchaseModal: React.FC<PurchaseModalProps> = ({
       <h3 className={styles.boxTitle}>{box.name}</h3>
       
       <div className={styles.boxType}>
-        <Badge color={BOX_TYPE_COLOR[box.type]} text={BOX_TYPE_TEXT[box.type]} />
+        <Badge color={BOX_TYPE_COLOR[box.type as BoxType]} text={BOX_TYPE_TEXT[box.type as BoxType]} />
       </div>
       
       <div className={styles.priceInfo}>

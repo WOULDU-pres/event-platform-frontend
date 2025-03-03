@@ -1,6 +1,6 @@
 import { Card, Typography, Row, Col, Statistic, Progress, Divider, Table, Empty } from 'antd'
 import { CheckCircleOutlined, ClockCircleOutlined, CloseCircleOutlined, UserOutlined } from '@ant-design/icons'
-import { Chart, Line, Pie } from '@ant-design/charts'
+import { Line } from '@ant-design/charts'
 import type { AttendanceStatistics as StatisticsData } from '../../types/attendance'
 import styles from './AttendanceStatistics.module.css'
 
@@ -61,27 +61,6 @@ export function AttendanceStatistics({ statistics, eventTitle }: AttendanceStati
     { status: '지각', count: lateCount, color: '#faad14' },
     { status: '결석', count: absentCount, color: '#f5222d' },
   ]
-
-  // 파이 차트 구성
-  const pieConfig = {
-    data: statusData,
-    angleField: 'count',
-    colorField: 'status',
-    radius: 0.8,
-    label: {
-      type: 'outer',
-      content: '{name}: {percentage}',
-    },
-    interactions: [{ type: 'element-active' }],
-    legend: {
-      layout: 'horizontal',
-      position: 'bottom',
-    },
-    color: ({ status }: { status: string }) => {
-      const item = statusData.find(d => d.status === status)
-      return item ? item.color : '#1890ff'
-    },
-  }
 
   // 데이터가 없을 경우 처리
   const noData = totalParticipants === 0

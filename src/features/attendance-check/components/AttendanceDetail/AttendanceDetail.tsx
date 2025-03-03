@@ -1,5 +1,5 @@
 import { Card, Tag, Typography, Button, Image, Descriptions, Divider, Space, Statistic, Row, Col } from 'antd'
-import { CalendarOutlined, EnvironmentOutlined, TeamOutlined, QrcodeOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons'
+import { CalendarOutlined, EnvironmentOutlined, QrcodeOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons'
 import type { AttendanceEvent, AttendanceEventStatus } from '../../types/attendance'
 import styles from './AttendanceDetail.module.css'
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Button, Spin, Tabs, Typography, Modal, Space, message } from 'antd'
+import { Button, Spin, Tabs, Typography, Modal } from 'antd'
 import { ArrowLeftOutlined, ExclamationCircleOutlined } from '@ant-design/icons'
 import { useAttendanceDetail } from '../../hooks/useAttendance'
 import { AttendanceDetail } from '../../components/AttendanceDetail/AttendanceDetail'

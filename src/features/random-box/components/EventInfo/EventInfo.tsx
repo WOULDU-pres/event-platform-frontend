@@ -4,7 +4,7 @@ import { CalendarOutlined, ClockCircleOutlined, GiftOutlined } from '@ant-design
 import { EventInfo as EventInfoType } from '../../types'
 import styles from './EventInfo.module.css'
 
-const { Text, Title } = Typography
+const { Text } = Typography
 
 interface EventInfoProps {
   eventInfo: EventInfoType

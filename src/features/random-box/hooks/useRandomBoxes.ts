@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useRandomBoxEvents, useRandomBoxEventDetail, useRandomBoxDetail } from '../api/randomBoxApi'
 import { useRandomBoxStore } from '../stores'
-import { RandomBoxEvent, RandomBox } from '../types'
 
 /**
  * 랜덤박스 이벤트 및 박스 정보를 가져오는 훅

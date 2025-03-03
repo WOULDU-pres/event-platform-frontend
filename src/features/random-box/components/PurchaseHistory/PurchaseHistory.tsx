@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Card, Empty, Button, Badge, Input, Select, DatePicker, Spin, Pagination } from 'antd'
+import React, { useState } from 'react'
+import { Card, Button, Badge, Input, Select, DatePicker, Spin, Pagination } from 'antd'
 import { 
   GiftOutlined, 
   HistoryOutlined, 
